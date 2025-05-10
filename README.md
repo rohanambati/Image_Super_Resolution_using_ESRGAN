@@ -17,7 +17,7 @@ It upscales low-resolution inputs into crisp high-resolution outputs. Perfect fo
 
 ## Workflow
 
-1. Download DIV2K data via `kagglehub.dataset_download()` into `/content/data/`
+1. Download DIV2K data via the built-in `kagglehub.dataset_download()` cell.
 2. Preprocess images
 
    * Generate low-res (LR) and high-res (HR) pairs
@@ -39,8 +39,7 @@ It upscales low-resolution inputs into crisp high-resolution outputs. Perfect fo
 
 ## Dataset
 
-Use the **DIV2K** dataset for training and validation.
-Place `DIV2K_train_HR` and `DIV2K_train_LR_bicubic` in `/content/data/` or run the download cell.
+The DIV2K dataset is downloaded **automatically** into `/content/data/` by the Colab cell—no manual steps.
 
 ## Installation & Setup
 
@@ -49,7 +48,7 @@ Place `DIV2K_train_HR` and `DIV2K_train_LR_bicubic` in `/content/data/` or run t
 2. Open the Colab notebook:
    `Image Super Resolutoin using ESRGAN.ipynb`
 3. Install requirements:
-   `pip install torch torchvision kagglehub numpy pillow matplotlib`
+   `pip install torch>=1.13.1 torchvision>=0.14.1 kagglehub numpy Pillow matplotlib`
 4. Authenticate Kagglehub and run the download cell
 5. Run all cells in order
 
@@ -58,4 +57,9 @@ Place `DIV2K_train_HR` and `DIV2K_train_LR_bicubic` in `/content/data/` or run t
 * **Train from scratch**: run the training cells
 * **Inference**: upload your own LR image in the Colab widget and click “Enhance”
 
-I think this gives a clear guide to get started.
+## References
+
+* Wang et al., “ESRGAN: Enhanced Super-Resolution Generative Adversarial Networks,” ECCVW 2018.
+* Agustsson & Timofte, “NTIRE 2017 Challenge on Single Image Super-Resolution: Dataset and Study,” CVPR Workshops.
+* DIV2K dataset: [https://data.vision.ee.ethz.ch/cvl/DIV2K/](https://data.vision.ee.ethz.ch/cvl/DIV2K/)
+* Simonyan & Zisserman, “Very Deep Convolutional Networks for Large-Scale Image Recognition,” ICLR 2015.
